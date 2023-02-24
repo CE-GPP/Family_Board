@@ -1,8 +1,24 @@
+/*
+
+ * Uses MIFARE RFID card using RFID-RC522 reader
+ * Uses MFRC522 - Library
+ * -----------------------------------------------------------------------------------------
+ *             MFRC522      Arduino      
+ *             Reader/PCD   Feather Huzzah 
+ * Signal      Pin          Pin          
+ * -----------------------------------------------------------------------------------------
+ * RST/Reset   RST          0           
+ * SPI SS      SDA(SS)      15            
+ * SPI MOSI    MOSI         13
+ * SPI MISO    MISO         12
+ * SPI SCK     SCK          14
+*/
+
 #include <SPI.h>
 #include <MFRC522.h>
  
-#define SS_PIN 10
-#define RST_PIN 9
+#define SS_PIN 15
+#define RST_PIN 0
 
 MFRC522 rfid(SS_PIN, RST_PIN); 
  
