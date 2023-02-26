@@ -1,0 +1,12 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="WindowLightController">
+			<method name="setLED"/>
+		</type>
+	</assembly>
+	<assembly fullname="LeanTouch" ignoreIfMissing="1">
+		<type fullname="Lean.Touch.LeanSelectByFinger">
+			<method name="SelectScreenPosition"/>
+		</type>
+	</assembly>
+</linker>

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
@@ -65,7 +66,7 @@ public class TapToPlace : MonoBehaviour
                 if (spawnedObject == null)
                 {
                     spawnedObject = Instantiate(gameObjectToInstantiate, hitPose.position, hitPose.rotation);
-
+                    spawnedObject.transform.Rotate(0,180,0);
                     _contentVisibleEvent();
 
                 }

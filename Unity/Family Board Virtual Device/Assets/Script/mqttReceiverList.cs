@@ -143,6 +143,11 @@ public class mqttReceiverList : M2MqttUnityClient
     [Tooltip("Set this to true to perform a testing cycle automatically on startup")]
     public bool autoTest = false;
 
+
+    public InputField FatherInputField;
+    public InputField MotherInputField;
+    public InputField SonInputField;
+    public InputField DaughterInputField;
     //using C# Property GET/SET and event listener to reduce Update overhead in the controlled objects
     //private string m_msg;
     //private string m_topic;
@@ -216,7 +221,19 @@ public class mqttReceiverList : M2MqttUnityClient
         btnDS.onClick.AddListener(PublishDS);
         Button btnDO = changeDataBtnDO.GetComponent<Button>();
         btnDO.onClick.AddListener(PublishDO);
+
+        var FatherInput = FatherInputField.GetComponent<InputField>();
+        //simply use the line below, 
+        FatherInput.onEndEdit.AddListener(SubmitName);
     }
+
+     private void SubmitName(string arg0)
+     {
+         Debug.Log(arg0);
+        var FatherElse =arg0;
+        client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        // return FatherElse;
+     }
 
     //Father
     public void PublishFH()
@@ -236,7 +253,7 @@ public class mqttReceiverList : M2MqttUnityClient
     }
     public void PublishFO()
     {
-        client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(messagePublishFO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(FatherInputField.GetComponent<InputField>().text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         Debug.Log("Test message published");
     }
 
@@ -326,7 +343,7 @@ public class mqttReceiverList : M2MqttUnityClient
             PublishFH();
             PublishFW();
             PublishFS();
-            PublishFO();
+
 
             PublishMH();
             PublishMW();

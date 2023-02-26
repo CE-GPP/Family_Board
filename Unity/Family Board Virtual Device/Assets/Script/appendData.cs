@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+using UnityEngine.UI;
+using Unity.UI;
 public class appendData : MonoBehaviour{
-
-
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -16,7 +15,9 @@ public class appendData : MonoBehaviour{
     {
         
     }
-    
+
+
+
 
     public void updatePanel(List<string> topicStorage, List<string> messageStorage){
         VisualElement baseTemplate = GetComponent<UIDocument>().rootVisualElement.Q("Content");
