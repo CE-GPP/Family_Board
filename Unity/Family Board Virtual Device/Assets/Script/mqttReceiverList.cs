@@ -88,7 +88,7 @@ public class mqttReceiverList : M2MqttUnityClient
 
     public string messagePublishFO = ""; // message to publish
     public Button changeDataBtnFO;
-
+    public string ElsePublishFather = ""; // topic to publish
 [Header("Set the topic to publish Mother Status")]
     public string topicPublishMother = ""; // topic to publish
     public string messagePublishMH = ""; // message to publish
@@ -105,7 +105,7 @@ public class mqttReceiverList : M2MqttUnityClient
 
     public string messagePublishMO = ""; // message to publish
     public Button changeDataBtnMO;
-
+    public string ElsePublishMother = ""; // topic to publish
 [Header("Set the topic to publish Son Status")]
     public string topicPublishSon = ""; // topic to publish
     public string messagePublishSH = ""; // message to publish
@@ -122,7 +122,7 @@ public class mqttReceiverList : M2MqttUnityClient
 
     public string messagePublishSO = ""; // message to publish
     public Button changeDataBtnSO;
-
+    public string ElsePublishSon = ""; // topic to publish
 [Header("Set the topic to publish Daughter Status")]
     public string topicPublishDaughter = ""; // topic to publish
     public string messagePublishDH = ""; // message to publish
@@ -139,7 +139,7 @@ public class mqttReceiverList : M2MqttUnityClient
 
     public string messagePublishDO = ""; // message to publish
     public Button changeDataBtnDO;
-
+    public string ElsePublishDaughter = ""; // topic to publish
     [Tooltip("Set this to true to perform a testing cycle automatically on startup")]
     public bool autoTest = false;
 
@@ -208,7 +208,7 @@ public class mqttReceiverList : M2MqttUnityClient
         btnSH.onClick.AddListener(PublishSH);
         Button btnSW = changeDataBtnSW.GetComponent<Button>();
         btnSW.onClick.AddListener(PublishSW);
-        Button btnSS = changeDataBtnMS.GetComponent<Button>();
+        Button btnSS = changeDataBtnSS.GetComponent<Button>();
         btnSS.onClick.AddListener(PublishSS);
         Button btnSO = changeDataBtnSO.GetComponent<Button>();
         btnSO.onClick.AddListener(PublishSO);
@@ -222,19 +222,44 @@ public class mqttReceiverList : M2MqttUnityClient
         Button btnDO = changeDataBtnDO.GetComponent<Button>();
         btnDO.onClick.AddListener(PublishDO);
 
-        var FatherInput = FatherInputField.GetComponent<InputField>();
-        //simply use the line below, 
-        FatherInput.onEndEdit.AddListener(SubmitName);
+
+        //Input fields (Legacy) 
+       FatherInputField.GetComponent<InputField>().onEndEdit.AddListener(FatherSubmitName);
+       MotherInputField.GetComponent<InputField>().onEndEdit.AddListener(MotherSubmitName);
+       SonInputField.GetComponent<InputField>().onEndEdit.AddListener(SonSubmitName);
+       DaughterInputField.GetComponent<InputField>().onEndEdit.AddListener(DaughterSubmitName);
     }
 
-     private void SubmitName(string arg0)
+     private void FatherSubmitName(string arg0)
      {
          Debug.Log(arg0);
-        var FatherElse =arg0;
-        client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
-        // return FatherElse;
-     }
 
+        client.Publish(ElsePublishFather, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        // client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+
+
+     }
+    private void MotherSubmitName(string arg0)
+     {
+         Debug.Log(arg0);
+
+        client.Publish(ElsePublishMother, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+
+     }
+    private void SonSubmitName(string arg0)
+     {
+         Debug.Log(arg0);
+
+        client.Publish(ElsePublishSon, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+
+     }
+    private void DaughterSubmitName(string arg0)
+     {
+         Debug.Log(arg0);
+
+        client.Publish(ElsePublishDaughter, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+
+     }
     //Father
     public void PublishFH()
     {
@@ -253,7 +278,8 @@ public class mqttReceiverList : M2MqttUnityClient
     }
     public void PublishFO()
     {
-        client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(FatherInputField.GetComponent<InputField>().text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(messagePublishFO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        client.Publish(ElsePublishFather, System.Text.Encoding.UTF8.GetBytes(FatherInputField.GetComponent<InputField>().text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         Debug.Log("Test message published");
     }
 
@@ -276,6 +302,7 @@ public class mqttReceiverList : M2MqttUnityClient
     public void PublishMO()
     {
         client.Publish(topicPublishMother, System.Text.Encoding.UTF8.GetBytes(messagePublishMO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        client.Publish(ElsePublishMother, System.Text.Encoding.UTF8.GetBytes(MotherInputField.GetComponent<InputField>().text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         Debug.Log("Test message published");
     }
 
@@ -298,6 +325,7 @@ public class mqttReceiverList : M2MqttUnityClient
     public void PublishSO()
     {
         client.Publish(topicPublishSon, System.Text.Encoding.UTF8.GetBytes(messagePublishSO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        client.Publish(ElsePublishSon, System.Text.Encoding.UTF8.GetBytes(SonInputField.GetComponent<InputField>().text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         Debug.Log("Test message published");
     }
 
@@ -320,6 +348,7 @@ public class mqttReceiverList : M2MqttUnityClient
     public void PublishDO()
     {
         client.Publish(topicPublishDaughter, System.Text.Encoding.UTF8.GetBytes(messagePublishDO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        client.Publish(ElsePublishDaughter, System.Text.Encoding.UTF8.GetBytes(DaughterInputField.GetComponent<InputField>().text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         Debug.Log("Test message published");
     }
 
@@ -343,6 +372,7 @@ public class mqttReceiverList : M2MqttUnityClient
             PublishFH();
             PublishFW();
             PublishFS();
+            PublishFO();
 
 
             PublishMH();
@@ -417,11 +447,11 @@ public class mqttReceiverList : M2MqttUnityClient
 
     private void StoreMessage(string eventMsg, string eventTopic)
     {
-        if (eventMessages.Count > 50)
-        {
-            eventMessages.Clear();
-            eventTopics.Clear();
-        }
+        // if (eventMessages.Count > 50)
+        // {
+        //     eventMessages.Clear();
+        //     eventTopics.Clear();
+        // }
         //Father Status LEDs
         Renderer rendererFH = GameObject.FindWithTag("LEDFH").GetComponent<Renderer>();
         Renderer rendererFW = GameObject.FindWithTag("LEDFW").GetComponent<Renderer>();
@@ -449,21 +479,21 @@ public class mqttReceiverList : M2MqttUnityClient
         eventTopics.Add(eventTopic);
 
 // Changing Father's LEDs based on the status data fetched from MQTT
-        if(eventTopic == "student/ucfnnbx/whatscup/match"){
+        if(eventTopic == "student/ucfnnie/FamilyBoard/Dad/DadLocation"){
             Debug.Log ("found topic");
-            if(eventMsg == "Home"){
+            if(eventMsg == "1"){
                 Debug.Log ("Home");
                 rendererFH.materials[3].SetColor("_Color", Color.cyan);
                 rendererFW.materials[3].SetColor("_Color", Color.grey);
                 rendererFS.materials[3].SetColor("_Color", Color.grey);
                 rendererFO.materials[3].SetColor("_Color", Color.grey);
-            }else if(eventMsg == "Work"){
+            }else if(eventMsg == "2"){
                 Debug.Log ("Work");
                 rendererFH.materials[3].SetColor("_Color", Color.grey);
                 rendererFW.materials[3].SetColor("_Color", Color.cyan);
                 rendererFS.materials[3].SetColor("_Color", Color.grey);
                 rendererFO.materials[3].SetColor("_Color", Color.grey);
-            }else if(eventMsg == "Study"){
+            }else if(eventMsg == "3"){
                 Debug.Log ("Study");
                 rendererFH.materials[3].SetColor("_Color", Color.grey);  
                 rendererFW.materials[3].SetColor("_Color", Color.grey);
@@ -479,21 +509,21 @@ public class mqttReceiverList : M2MqttUnityClient
         }
 
 // Changing Mother's LEDs based on the status data fetched from MQTT
-        if(eventTopic == "student/ucfnnbx/whatscup/match1"){
+       else if(eventTopic == "student/ucfnnie/FamilyBoard/Mom/MomLocation"){
             Debug.Log ("found topic");
-            if(eventMsg == "Home"){
+            if(eventMsg == "1"){
                 Debug.Log ("Home");
                 rendererMH.materials[3].SetColor("_Color", Color.cyan);
                 rendererMW.materials[3].SetColor("_Color", Color.grey);
                 rendererMS.materials[3].SetColor("_Color", Color.grey);
                 rendererMO.materials[3].SetColor("_Color", Color.grey);
-            }else if(eventMsg == "Work"){
+            }else if(eventMsg == "2"){
                 Debug.Log ("Work");
                 rendererMH.materials[3].SetColor("_Color", Color.grey);
                 rendererMW.materials[3].SetColor("_Color", Color.cyan);
                 rendererMS.materials[3].SetColor("_Color", Color.grey);
                 rendererMO.materials[3].SetColor("_Color", Color.grey);
-            }else if(eventMsg == "Study"){
+            }else if(eventMsg == "3"){
                 Debug.Log ("Study");
                 rendererMH.materials[3].SetColor("_Color", Color.grey);  
                 rendererMW.materials[3].SetColor("_Color", Color.grey);
@@ -509,21 +539,21 @@ public class mqttReceiverList : M2MqttUnityClient
         }      
 
 // Changing Son's LEDs based on the status data fetched from MQTT
-        if(eventTopic == "student/ucfnnbx/whatscup/match1"){
+      else if(eventTopic == "student/ucfnnie/FamilyBoard/Son/SonLocation"){
             Debug.Log ("found topic");
-            if(eventMsg == "Home"){
+            if(eventMsg == "1"){
                 Debug.Log ("Home");
                 rendererSH.materials[3].SetColor("_Color", Color.cyan);
                 rendererSW.materials[3].SetColor("_Color", Color.grey);
                 rendererSS.materials[3].SetColor("_Color", Color.grey);
                 rendererSO.materials[3].SetColor("_Color", Color.grey);
-            }else if(eventMsg == "Work"){
+            }else if(eventMsg == "2"){
                 Debug.Log ("Work");
                 rendererSH.materials[3].SetColor("_Color", Color.grey);
                 rendererSW.materials[3].SetColor("_Color", Color.cyan);
                 rendererSS.materials[3].SetColor("_Color", Color.grey);
                 rendererSO.materials[3].SetColor("_Color", Color.grey);
-            }else if(eventMsg == "Study"){
+            }else if(eventMsg == "3"){
                 Debug.Log ("Study");
                 rendererSH.materials[3].SetColor("_Color", Color.grey);  
                 rendererSW.materials[3].SetColor("_Color", Color.grey);
@@ -539,21 +569,21 @@ public class mqttReceiverList : M2MqttUnityClient
         }  
 
 // Changing Daughter's LEDs based on the status data fetched from MQTT
-        if(eventTopic == "student/ucfnnbx/whatscup/match1"){
+       else if(eventTopic == "student/ucfnnie/FamilyBoard/Daughter/DaughterLocation"){
             Debug.Log ("found topic");
-            if(eventMsg == "Home"){
+            if(eventMsg == "1"){
                 Debug.Log ("Home");
                 rendererDH.materials[3].SetColor("_Color", Color.cyan);
                 rendererDW.materials[3].SetColor("_Color", Color.grey);
                 rendererDS.materials[3].SetColor("_Color", Color.grey);
                 rendererDO.materials[3].SetColor("_Color", Color.grey);
-            }else if(eventMsg == "Work"){
+            }else if(eventMsg == "2"){
                 Debug.Log ("Work");
                 rendererDH.materials[3].SetColor("_Color", Color.grey);
                 rendererDW.materials[3].SetColor("_Color", Color.cyan);
                 rendererDS.materials[3].SetColor("_Color", Color.grey);
                 rendererDO.materials[3].SetColor("_Color", Color.grey);
-            }else if(eventMsg == "Study"){
+            }else if(eventMsg == "3"){
                 Debug.Log ("Study");
                 rendererDH.materials[3].SetColor("_Color", Color.grey);  
                 rendererDW.materials[3].SetColor("_Color", Color.grey);

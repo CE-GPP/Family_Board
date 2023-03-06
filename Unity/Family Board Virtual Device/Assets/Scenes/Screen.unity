@@ -188,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 4499349560426585015, guid: c08b7d3d01b844becab3aaf17eeba123,
         type: 3}
       propertyPath: mqttPassword
-      value: 
+      value: ce2021-mqtt-forget-whale
       objectReference: {fileID: 0}
     - target: {fileID: 7820069009933759439, guid: c08b7d3d01b844becab3aaf17eeba123,
         type: 3}

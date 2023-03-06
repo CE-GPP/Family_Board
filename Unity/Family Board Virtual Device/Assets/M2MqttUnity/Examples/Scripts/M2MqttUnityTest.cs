@@ -22,14 +22,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using uPLibrary.Networking.M2Mqtt;
+
 using uPLibrary.Networking.M2Mqtt.Messages;
-using M2MqttUnity;
+
 
 /// <summary>
 /// Examples for the M2MQTT library (https://github.com/eclipse/paho.mqtt.m2mqtt),
