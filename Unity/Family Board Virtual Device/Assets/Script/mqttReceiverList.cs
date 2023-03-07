@@ -233,32 +233,33 @@ public class mqttReceiverList : M2MqttUnityClient
      private void FatherSubmitName(string arg0)
      {
          Debug.Log(arg0);
-
+        client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(messagePublishFO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         client.Publish(ElsePublishFather, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
-        // client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
-
 
      }
+
     private void MotherSubmitName(string arg0)
      {
          Debug.Log(arg0);
-
+        client.Publish(topicPublishMother, System.Text.Encoding.UTF8.GetBytes(messagePublishMO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         client.Publish(ElsePublishMother, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
-
+        
      }
+
     private void SonSubmitName(string arg0)
      {
          Debug.Log(arg0);
-
+        client.Publish(topicPublishSon, System.Text.Encoding.UTF8.GetBytes(messagePublishSO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         client.Publish(ElsePublishSon, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
-
+        
      }
+
     private void DaughterSubmitName(string arg0)
      {
          Debug.Log(arg0);
-
+        client.Publish(topicPublishDaughter, System.Text.Encoding.UTF8.GetBytes(messagePublishDO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         client.Publish(ElsePublishDaughter, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
-
+        
      }
     //Father
     public void PublishFH()
@@ -447,6 +448,7 @@ public class mqttReceiverList : M2MqttUnityClient
 
     private void StoreMessage(string eventMsg, string eventTopic)
     {
+        // Color = System.Drawing.Color;
         // if (eventMessages.Count > 50)
         // {
         //     eventMessages.Clear();
@@ -483,28 +485,28 @@ public class mqttReceiverList : M2MqttUnityClient
             Debug.Log ("found topic");
             if(eventMsg == "1"){
                 Debug.Log ("Home");
-                rendererFH.materials[3].SetColor("_Color", Color.cyan);
-                rendererFW.materials[3].SetColor("_Color", Color.grey);
-                rendererFS.materials[3].SetColor("_Color", Color.grey);
-                rendererFO.materials[3].SetColor("_Color", Color.grey);
+                rendererFH.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererFW.materials[0].SetColor("_Color", Color.grey);
+                rendererFS.materials[0].SetColor("_Color", Color.grey);
+                rendererFO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "2"){
                 Debug.Log ("Work");
-                rendererFH.materials[3].SetColor("_Color", Color.grey);
-                rendererFW.materials[3].SetColor("_Color", Color.cyan);
-                rendererFS.materials[3].SetColor("_Color", Color.grey);
-                rendererFO.materials[3].SetColor("_Color", Color.grey);
+                rendererFH.materials[0].SetColor("_Color", Color.grey);
+                rendererFW.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererFS.materials[0].SetColor("_Color", Color.grey);
+                rendererFO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "3"){
                 Debug.Log ("Study");
-                rendererFH.materials[3].SetColor("_Color", Color.grey);  
-                rendererFW.materials[3].SetColor("_Color", Color.grey);
-                rendererFS.materials[3].SetColor("_Color", Color.cyan);
-                rendererFO.materials[3].SetColor("_Color", Color.grey);
+                rendererFH.materials[0].SetColor("_Color", Color.grey);  
+                rendererFW.materials[0].SetColor("_Color", Color.grey);
+                rendererFS.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererFO.materials[0].SetColor("_Color", Color.grey);
             }else {
                 Debug.Log ("Other");
-                rendererFH.materials[3].SetColor("_Color", Color.grey);
-                rendererFW.materials[3].SetColor("_Color", Color.grey);
-                rendererFS.materials[3].SetColor("_Color", Color.grey);
-                rendererFO.materials[3].SetColor("_Color", Color.cyan);
+                rendererFH.materials[0].SetColor("_Color", Color.grey);
+                rendererFW.materials[0].SetColor("_Color", Color.grey);
+                rendererFS.materials[0].SetColor("_Color", Color.grey);
+                rendererFO.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
             }
         }
 
@@ -513,28 +515,28 @@ public class mqttReceiverList : M2MqttUnityClient
             Debug.Log ("found topic");
             if(eventMsg == "1"){
                 Debug.Log ("Home");
-                rendererMH.materials[3].SetColor("_Color", Color.cyan);
-                rendererMW.materials[3].SetColor("_Color", Color.grey);
-                rendererMS.materials[3].SetColor("_Color", Color.grey);
-                rendererMO.materials[3].SetColor("_Color", Color.grey);
+                rendererMH.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererMW.materials[0].SetColor("_Color", Color.grey);
+                rendererMS.materials[0].SetColor("_Color", Color.grey);
+                rendererMO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "2"){
                 Debug.Log ("Work");
-                rendererMH.materials[3].SetColor("_Color", Color.grey);
-                rendererMW.materials[3].SetColor("_Color", Color.cyan);
-                rendererMS.materials[3].SetColor("_Color", Color.grey);
-                rendererMO.materials[3].SetColor("_Color", Color.grey);
+                rendererMH.materials[0].SetColor("_Color", Color.grey);
+                rendererMW.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererMS.materials[0].SetColor("_Color", Color.grey);
+                rendererMO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "3"){
                 Debug.Log ("Study");
-                rendererMH.materials[3].SetColor("_Color", Color.grey);  
-                rendererMW.materials[3].SetColor("_Color", Color.grey);
-                rendererMS.materials[3].SetColor("_Color", Color.cyan);
-                rendererMO.materials[3].SetColor("_Color", Color.grey);
+                rendererMH.materials[0].SetColor("_Color", Color.grey);  
+                rendererMW.materials[0].SetColor("_Color", Color.grey);
+                rendererMS.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererMO.materials[0].SetColor("_Color", Color.grey);
             }else {
                 Debug.Log ("Other");
-                rendererMH.materials[3].SetColor("_Color", Color.grey);
-                rendererMW.materials[3].SetColor("_Color", Color.grey);
-                rendererMS.materials[3].SetColor("_Color", Color.grey);
-                rendererMO.materials[3].SetColor("_Color", Color.cyan);
+                rendererMH.materials[0].SetColor("_Color", Color.grey);
+                rendererMW.materials[0].SetColor("_Color", Color.grey);
+                rendererMS.materials[0].SetColor("_Color", Color.grey);
+                rendererMO.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
             }
         }      
 
@@ -543,28 +545,28 @@ public class mqttReceiverList : M2MqttUnityClient
             Debug.Log ("found topic");
             if(eventMsg == "1"){
                 Debug.Log ("Home");
-                rendererSH.materials[3].SetColor("_Color", Color.cyan);
-                rendererSW.materials[3].SetColor("_Color", Color.grey);
-                rendererSS.materials[3].SetColor("_Color", Color.grey);
-                rendererSO.materials[3].SetColor("_Color", Color.grey);
+                rendererSH.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererSW.materials[0].SetColor("_Color", Color.grey);
+                rendererSS.materials[0].SetColor("_Color", Color.grey);
+                rendererSO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "2"){
                 Debug.Log ("Work");
-                rendererSH.materials[3].SetColor("_Color", Color.grey);
-                rendererSW.materials[3].SetColor("_Color", Color.cyan);
-                rendererSS.materials[3].SetColor("_Color", Color.grey);
-                rendererSO.materials[3].SetColor("_Color", Color.grey);
+                rendererSH.materials[0].SetColor("_Color", Color.grey);
+                rendererSW.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererSS.materials[0].SetColor("_Color", Color.grey);
+                rendererSO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "3"){
                 Debug.Log ("Study");
-                rendererSH.materials[3].SetColor("_Color", Color.grey);  
-                rendererSW.materials[3].SetColor("_Color", Color.grey);
-                rendererSS.materials[3].SetColor("_Color", Color.cyan);
-                rendererSO.materials[3].SetColor("_Color", Color.grey);
+                rendererSH.materials[0].SetColor("_Color", Color.grey);  
+                rendererSW.materials[0].SetColor("_Color", Color.grey);
+                rendererSS.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererSO.materials[0].SetColor("_Color", Color.grey);
             }else {
                 Debug.Log ("Other");
-                rendererSH.materials[3].SetColor("_Color", Color.grey);
-                rendererSW.materials[3].SetColor("_Color", Color.grey);
-                rendererSS.materials[3].SetColor("_Color", Color.grey);
-                rendererSO.materials[3].SetColor("_Color", Color.cyan);
+                rendererSH.materials[0].SetColor("_Color", Color.grey);
+                rendererSW.materials[0].SetColor("_Color", Color.grey);
+                rendererSS.materials[0].SetColor("_Color", Color.grey);
+                rendererSO.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
             }
         }  
 
@@ -573,28 +575,28 @@ public class mqttReceiverList : M2MqttUnityClient
             Debug.Log ("found topic");
             if(eventMsg == "1"){
                 Debug.Log ("Home");
-                rendererDH.materials[3].SetColor("_Color", Color.cyan);
-                rendererDW.materials[3].SetColor("_Color", Color.grey);
-                rendererDS.materials[3].SetColor("_Color", Color.grey);
-                rendererDO.materials[3].SetColor("_Color", Color.grey);
+                rendererDH.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererDW.materials[0].SetColor("_Color", Color.grey);
+                rendererDS.materials[0].SetColor("_Color", Color.grey);
+                rendererDO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "2"){
                 Debug.Log ("Work");
-                rendererDH.materials[3].SetColor("_Color", Color.grey);
-                rendererDW.materials[3].SetColor("_Color", Color.cyan);
-                rendererDS.materials[3].SetColor("_Color", Color.grey);
-                rendererDO.materials[3].SetColor("_Color", Color.grey);
+                rendererDH.materials[0].SetColor("_Color", Color.grey);
+                rendererDW.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererDS.materials[0].SetColor("_Color", Color.grey);
+                rendererDO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "3"){
                 Debug.Log ("Study");
-                rendererDH.materials[3].SetColor("_Color", Color.grey);  
-                rendererDW.materials[3].SetColor("_Color", Color.grey);
-                rendererDS.materials[3].SetColor("_Color", Color.cyan);
-                rendererDO.materials[3].SetColor("_Color", Color.grey);
+                rendererDH.materials[0].SetColor("_Color", Color.grey);  
+                rendererDW.materials[0].SetColor("_Color", Color.grey);
+                rendererDS.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererDO.materials[0].SetColor("_Color", Color.grey);
             }else {
                 Debug.Log ("Other");
-                rendererDH.materials[3].SetColor("_Color", Color.grey);
-                rendererDW.materials[3].SetColor("_Color", Color.grey);
-                rendererDS.materials[3].SetColor("_Color", Color.grey);
-                rendererDO.materials[3].SetColor("_Color", Color.cyan);
+                rendererDH.materials[0].SetColor("_Color", Color.grey);
+                rendererDW.materials[0].SetColor("_Color", Color.grey);
+                rendererDS.materials[0].SetColor("_Color", Color.grey);
+                rendererDO.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
             }
         }  
         appendData appendData = GetComponent<appendData>();
