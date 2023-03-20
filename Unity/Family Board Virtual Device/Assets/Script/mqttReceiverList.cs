@@ -35,6 +35,7 @@ using UnityEngine;
 using M2MqttUnity;
 using UnityEngine.UI;
 using uPLibrary.Networking.M2Mqtt.Messages;
+using System;
 
 //the mqttObj is use to store both message and topic, so we can select the right object from the controller
 public class mqttObj{
@@ -232,6 +233,7 @@ public class mqttReceiverList : M2MqttUnityClient
 
      private void FatherSubmitName(string arg0)
      {
+       arg0= arg0.Substring(0, Math.Min(arg0.Length, 16));
          Debug.Log(arg0);
         client.Publish(topicPublishFather, System.Text.Encoding.UTF8.GetBytes(messagePublishFO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         client.Publish(ElsePublishFather, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
@@ -240,6 +242,7 @@ public class mqttReceiverList : M2MqttUnityClient
 
     private void MotherSubmitName(string arg0)
      {
+       arg0=  arg0.Substring(0, Math.Min(arg0.Length, 16));
          Debug.Log(arg0);
         client.Publish(topicPublishMother, System.Text.Encoding.UTF8.GetBytes(messagePublishMO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         client.Publish(ElsePublishMother, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
@@ -248,6 +251,7 @@ public class mqttReceiverList : M2MqttUnityClient
 
     private void SonSubmitName(string arg0)
      {
+       arg0= arg0.Substring(0, Math.Min(arg0.Length, 16));
          Debug.Log(arg0);
         client.Publish(topicPublishSon, System.Text.Encoding.UTF8.GetBytes(messagePublishSO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         client.Publish(ElsePublishSon, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
@@ -256,6 +260,7 @@ public class mqttReceiverList : M2MqttUnityClient
 
     private void DaughterSubmitName(string arg0)
      {
+       arg0= arg0.Substring(0, Math.Min(arg0.Length, 16));
          Debug.Log(arg0);
         client.Publish(topicPublishDaughter, System.Text.Encoding.UTF8.GetBytes(messagePublishDO), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         client.Publish(ElsePublishDaughter, System.Text.Encoding.UTF8.GetBytes(arg0), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
@@ -485,28 +490,28 @@ public class mqttReceiverList : M2MqttUnityClient
             Debug.Log ("found topic");
             if(eventMsg == "1"){
                 Debug.Log ("Home");
-                rendererFH.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererFH.materials[0].SetColor("_Color", new Color(0.0f, 1.0f, 0.0f));
                 rendererFW.materials[0].SetColor("_Color", Color.grey);
                 rendererFS.materials[0].SetColor("_Color", Color.grey);
                 rendererFO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "2"){
                 Debug.Log ("Work");
                 rendererFH.materials[0].SetColor("_Color", Color.grey);
-                rendererFW.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererFW.materials[0].SetColor("_Color", new Color(0.0f, 1.0f, 0.0f));
                 rendererFS.materials[0].SetColor("_Color", Color.grey);
                 rendererFO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "3"){
                 Debug.Log ("Study");
                 rendererFH.materials[0].SetColor("_Color", Color.grey);  
                 rendererFW.materials[0].SetColor("_Color", Color.grey);
-                rendererFS.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererFS.materials[0].SetColor("_Color", new Color(0.0f, 1.0f, 0.0f));
                 rendererFO.materials[0].SetColor("_Color", Color.grey);
             }else {
                 Debug.Log ("Other");
                 rendererFH.materials[0].SetColor("_Color", Color.grey);
                 rendererFW.materials[0].SetColor("_Color", Color.grey);
                 rendererFS.materials[0].SetColor("_Color", Color.grey);
-                rendererFO.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererFO.materials[0].SetColor("_Color", new Color(0.0f, 1.0f, 0.0f));
             }
         }
 
@@ -545,28 +550,28 @@ public class mqttReceiverList : M2MqttUnityClient
             Debug.Log ("found topic");
             if(eventMsg == "1"){
                 Debug.Log ("Home");
-                rendererSH.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererSH.materials[0].SetColor("_Color", new Color(0.0f, 0.75f, 1.0f));
                 rendererSW.materials[0].SetColor("_Color", Color.grey);
                 rendererSS.materials[0].SetColor("_Color", Color.grey);
                 rendererSO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "2"){
                 Debug.Log ("Work");
                 rendererSH.materials[0].SetColor("_Color", Color.grey);
-                rendererSW.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererSW.materials[0].SetColor("_Color", new Color(0.0f, 0.75f, 1.0f));
                 rendererSS.materials[0].SetColor("_Color", Color.grey);
                 rendererSO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "3"){
                 Debug.Log ("Study");
                 rendererSH.materials[0].SetColor("_Color", Color.grey);  
                 rendererSW.materials[0].SetColor("_Color", Color.grey);
-                rendererSS.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererSS.materials[0].SetColor("_Color", new Color(0.0f, 0.75f, 1.0f));
                 rendererSO.materials[0].SetColor("_Color", Color.grey);
             }else {
                 Debug.Log ("Other");
                 rendererSH.materials[0].SetColor("_Color", Color.grey);
                 rendererSW.materials[0].SetColor("_Color", Color.grey);
                 rendererSS.materials[0].SetColor("_Color", Color.grey);
-                rendererSO.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererSO.materials[0].SetColor("_Color", new Color(0.0f, 0.75f, 1.0f));
             }
         }  
 
@@ -575,28 +580,28 @@ public class mqttReceiverList : M2MqttUnityClient
             Debug.Log ("found topic");
             if(eventMsg == "1"){
                 Debug.Log ("Home");
-                rendererDH.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererDH.materials[0].SetColor("_Color", new Color(1.0f, 0.08f, 0.58f));
                 rendererDW.materials[0].SetColor("_Color", Color.grey);
                 rendererDS.materials[0].SetColor("_Color", Color.grey);
                 rendererDO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "2"){
                 Debug.Log ("Work");
                 rendererDH.materials[0].SetColor("_Color", Color.grey);
-                rendererDW.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererDW.materials[0].SetColor("_Color", new Color(1.0f, 0.08f, 0.58f));
                 rendererDS.materials[0].SetColor("_Color", Color.grey);
                 rendererDO.materials[0].SetColor("_Color", Color.grey);
             }else if(eventMsg == "3"){
                 Debug.Log ("Study");
                 rendererDH.materials[0].SetColor("_Color", Color.grey);  
                 rendererDW.materials[0].SetColor("_Color", Color.grey);
-                rendererDS.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererDS.materials[0].SetColor("_Color", new Color(1.0f, 0.08f, 0.58f));
                 rendererDO.materials[0].SetColor("_Color", Color.grey);
             }else {
                 Debug.Log ("Other");
                 rendererDH.materials[0].SetColor("_Color", Color.grey);
                 rendererDW.materials[0].SetColor("_Color", Color.grey);
                 rendererDS.materials[0].SetColor("_Color", Color.grey);
-                rendererDO.materials[0].SetColor("_Color", new Color(1f, 0.62f,0.27f));
+                rendererDO.materials[0].SetColor("_Color", new Color(1.0f, 0.08f, 0.58f));
             }
         }  
         appendData appendData = GetComponent<appendData>();

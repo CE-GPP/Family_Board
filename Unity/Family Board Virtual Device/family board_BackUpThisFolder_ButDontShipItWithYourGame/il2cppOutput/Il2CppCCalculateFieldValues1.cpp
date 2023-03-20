@@ -22162,74 +22162,90 @@ struct mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33  : public M2Mq
 	String_t* ___messagePublishFO_30;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnFO
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnFO_31;
+	// System.String mqttReceiverList::ElsePublishFather
+	String_t* ___ElsePublishFather_32;
 	// System.String mqttReceiverList::topicPublishMother
-	String_t* ___topicPublishMother_32;
+	String_t* ___topicPublishMother_33;
 	// System.String mqttReceiverList::messagePublishMH
-	String_t* ___messagePublishMH_33;
+	String_t* ___messagePublishMH_34;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnMH
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnMH_34;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnMH_35;
 	// System.String mqttReceiverList::messagePublishMW
-	String_t* ___messagePublishMW_35;
+	String_t* ___messagePublishMW_36;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnMW
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnMW_36;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnMW_37;
 	// System.String mqttReceiverList::messagePublishMS
-	String_t* ___messagePublishMS_37;
+	String_t* ___messagePublishMS_38;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnMS
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnMS_38;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnMS_39;
 	// System.String mqttReceiverList::messagePublishMO
-	String_t* ___messagePublishMO_39;
+	String_t* ___messagePublishMO_40;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnMO
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnMO_40;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnMO_41;
+	// System.String mqttReceiverList::ElsePublishMother
+	String_t* ___ElsePublishMother_42;
 	// System.String mqttReceiverList::topicPublishSon
-	String_t* ___topicPublishSon_41;
+	String_t* ___topicPublishSon_43;
 	// System.String mqttReceiverList::messagePublishSH
-	String_t* ___messagePublishSH_42;
+	String_t* ___messagePublishSH_44;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnSH
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnSH_43;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnSH_45;
 	// System.String mqttReceiverList::messagePublishSW
-	String_t* ___messagePublishSW_44;
+	String_t* ___messagePublishSW_46;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnSW
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnSW_45;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnSW_47;
 	// System.String mqttReceiverList::messagePublishSS
-	String_t* ___messagePublishSS_46;
+	String_t* ___messagePublishSS_48;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnSS
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnSS_47;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnSS_49;
 	// System.String mqttReceiverList::messagePublishSO
-	String_t* ___messagePublishSO_48;
+	String_t* ___messagePublishSO_50;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnSO
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnSO_49;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnSO_51;
+	// System.String mqttReceiverList::ElsePublishSon
+	String_t* ___ElsePublishSon_52;
 	// System.String mqttReceiverList::topicPublishDaughter
-	String_t* ___topicPublishDaughter_50;
+	String_t* ___topicPublishDaughter_53;
 	// System.String mqttReceiverList::messagePublishDH
-	String_t* ___messagePublishDH_51;
+	String_t* ___messagePublishDH_54;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnDH
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnDH_52;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnDH_55;
 	// System.String mqttReceiverList::messagePublishDW
-	String_t* ___messagePublishDW_53;
+	String_t* ___messagePublishDW_56;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnDW
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnDW_54;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnDW_57;
 	// System.String mqttReceiverList::messagePublishDS
-	String_t* ___messagePublishDS_55;
+	String_t* ___messagePublishDS_58;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnDS
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnDS_56;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnDS_59;
 	// System.String mqttReceiverList::messagePublishDO
-	String_t* ___messagePublishDO_57;
+	String_t* ___messagePublishDO_60;
 	// UnityEngine.UI.Button mqttReceiverList::changeDataBtnDO
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnDO_58;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___changeDataBtnDO_61;
+	// System.String mqttReceiverList::ElsePublishDaughter
+	String_t* ___ElsePublishDaughter_62;
 	// System.Boolean mqttReceiverList::autoTest
-	bool ___autoTest_59;
+	bool ___autoTest_63;
+	// UnityEngine.UI.InputField mqttReceiverList::FatherInputField
+	InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* ___FatherInputField_64;
+	// UnityEngine.UI.InputField mqttReceiverList::MotherInputField
+	InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* ___MotherInputField_65;
+	// UnityEngine.UI.InputField mqttReceiverList::SonInputField
+	InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* ___SonInputField_66;
+	// UnityEngine.UI.InputField mqttReceiverList::DaughterInputField
+	InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* ___DaughterInputField_67;
 	// mqttObj mqttReceiverList::mqttObject
-	mqttObj_tD86235B150154536FA3B95FC78AEAC2F9981F802* ___mqttObject_60;
+	mqttObj_tD86235B150154536FA3B95FC78AEAC2F9981F802* ___mqttObject_68;
 	// mqttReceiverList/OnMessageArrivedDelegate mqttReceiverList::OnMessageArrived
-	OnMessageArrivedDelegate_t65D8A34D6240077AF49C7BB2151DF46B5FB1CBFA* ___OnMessageArrived_61;
+	OnMessageArrivedDelegate_t65D8A34D6240077AF49C7BB2151DF46B5FB1CBFA* ___OnMessageArrived_69;
 	// System.Boolean mqttReceiverList::m_isConnected
-	bool ___m_isConnected_62;
+	bool ___m_isConnected_70;
 	// mqttReceiverList/OnConnectionSucceededDelegate mqttReceiverList::OnConnectionSucceeded
-	OnConnectionSucceededDelegate_t66E45A0F200C29AA60CBAE861FAF2715C40A28E3* ___OnConnectionSucceeded_63;
+	OnConnectionSucceededDelegate_t66E45A0F200C29AA60CBAE861FAF2715C40A28E3* ___OnConnectionSucceeded_71;
 	// System.Collections.Generic.List`1<System.String> mqttReceiverList::eventMessages
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___eventMessages_64;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___eventMessages_72;
 	// System.Collections.Generic.List`1<System.String> mqttReceiverList::eventTopics
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___eventTopics_65;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___eventTopics_73;
 };
 
 // UnityEngine.XR.OpenXR.Features.Interactions.MicrosoftHandInteraction/HoloLensHand
@@ -25393,9 +25409,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4187[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4189[2] = 
 {
 	static_cast<int32_t>(offsetof(mqttObj_tD86235B150154536FA3B95FC78AEAC2F9981F802, ___m_msg_0)),static_cast<int32_t>(offsetof(mqttObj_tD86235B150154536FA3B95FC78AEAC2F9981F802, ___m_topic_1)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4192[44] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4192[52] = 
 {
-	static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicSubscribe_22)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicPublishFather_23)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishFH_24)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnFH_25)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishFW_26)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnFW_27)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishFS_28)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnFS_29)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishFO_30)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnFO_31)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicPublishMother_32)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishMH_33)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnMH_34)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishMW_35)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnMW_36)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishMS_37)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnMS_38)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishMO_39)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnMO_40)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicPublishSon_41)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishSH_42)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnSH_43)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishSW_44)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnSW_45)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishSS_46)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnSS_47)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishSO_48)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnSO_49)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicPublishDaughter_50)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishDH_51)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnDH_52)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishDW_53)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnDW_54)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishDS_55)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnDS_56)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishDO_57)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnDO_58)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___autoTest_59)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___mqttObject_60)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___OnMessageArrived_61)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___m_isConnected_62)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___OnConnectionSucceeded_63)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___eventMessages_64)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___eventTopics_65)),};
+	static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicSubscribe_22)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicPublishFather_23)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishFH_24)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnFH_25)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishFW_26)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnFW_27)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishFS_28)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnFS_29)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishFO_30)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnFO_31)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___ElsePublishFather_32)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicPublishMother_33)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishMH_34)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnMH_35)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishMW_36)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnMW_37)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishMS_38)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnMS_39)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishMO_40)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnMO_41)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___ElsePublishMother_42)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicPublishSon_43)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishSH_44)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnSH_45)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishSW_46)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnSW_47)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishSS_48)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnSS_49)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishSO_50)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnSO_51)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___ElsePublishSon_52)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___topicPublishDaughter_53)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishDH_54)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnDH_55)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishDW_56)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnDW_57)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishDS_58)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnDS_59)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___messagePublishDO_60)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___changeDataBtnDO_61)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___ElsePublishDaughter_62)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___autoTest_63)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___FatherInputField_64)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___MotherInputField_65)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___SonInputField_66)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___DaughterInputField_67)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___mqttObject_68)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___OnMessageArrived_69)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___m_isConnected_70)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___OnConnectionSucceeded_71)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___eventMessages_72)),static_cast<int32_t>(offsetof(mqttReceiverList_t323B7AC2F7EFF9E4BE0893FF696CA821FE40FD33, ___eventTopics_73)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4194[9] = 
 {
 	static_cast<int32_t>(offsetof(TapToPlace_tA18834A9A13194DA0FAE0DA624F295550AB42A38, ___gameObjectToInstantiate_4)),static_cast<int32_t>(offsetof(TapToPlace_tA18834A9A13194DA0FAE0DA624F295550AB42A38, ___spawnedObject_5)),static_cast<int32_t>(offsetof(TapToPlace_tA18834A9A13194DA0FAE0DA624F295550AB42A38, ____arRaycastManager_6)),static_cast<int32_t>(offsetof(TapToPlace_tA18834A9A13194DA0FAE0DA624F295550AB42A38, ____arPlaneManager_7)),static_cast<int32_t>(offsetof(TapToPlace_tA18834A9A13194DA0FAE0DA624F295550AB42A38, ___touchPosition_8)),static_cast<int32_t>(offsetof(TapToPlace_tA18834A9A13194DA0FAE0DA624F295550AB42A38_StaticFields, ___hits_9)),static_cast<int32_t>(offsetof(TapToPlace_tA18834A9A13194DA0FAE0DA624F295550AB42A38, ___timeThreshold_10)),static_cast<int32_t>(offsetof(TapToPlace_tA18834A9A13194DA0FAE0DA624F295550AB42A38, ___isTouching_11)),static_cast<int32_t>(offsetof(TapToPlace_tA18834A9A13194DA0FAE0DA624F295550AB42A38, ____contentVisibleEvent_12)),};
