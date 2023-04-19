@@ -453,7 +453,6 @@ public class mqttReceiverList : M2MqttUnityClient
 
     private void StoreMessage(string eventMsg, string eventTopic)
     {
-        // Color = System.Drawing.Color;
         // if (eventMessages.Count > 50)
         // {
         //     eventMessages.Clear();

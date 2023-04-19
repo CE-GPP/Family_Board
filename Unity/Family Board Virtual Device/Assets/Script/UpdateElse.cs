@@ -1,7 +1,8 @@
 
+//Created For testing purposes, not being included in the final version of the app.
 using UnityEngine;
 using Unity​Engine.UIElements;
-using System.Collections.Generic;
+
 public class UpdateElse : MonoBehaviour
 {
     // provide reference in editor inspector (from step 2)
