@@ -4421,7 +4421,7 @@ MonoBehaviour:
   connectionDelay: 500
   timeoutOnConnection: 30000
   autoConnect: 1
-  mqttUserName: student
+  mqttUserName: 
   mqttPassword: 
   topicSubscribe:
   - student/ucfnnie/FamilyBoard/Mom/MomLocation
