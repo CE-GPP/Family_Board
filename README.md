@@ -112,13 +112,7 @@ Glue the support beams into the sides of the board, with the side with the hole 
 
 Glue the stair pieces to each other, then glue it underneath the hole for the door in the front of the board, so that the hole for the door is positioned above the middle of the stairs, about 10mm away from each end.
 
-After following these steps, you should have a completely assembled the laser cut components of your family board face.
-
-The interior should look like this (but with taped edges):
-![IMG_9232](https://user-images.githubusercontent.com/114293506/233713422-c3684133-0eb5-4118-a060-fe9f62638190.jpg)
-
-
- Leave the board to dry for at least 2 hours.
+After following these steps, you should have a completely assembled the laser cut components of your family board face. Leave the board to dry for at least 2 hours.
  
 ### 3.3.2 Assembling the family board roof
 Assemble each face of the roof with wood glue one by one, and tape each of the glued edges together for a secure finish. It should look like this:
