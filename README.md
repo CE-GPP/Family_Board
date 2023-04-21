@@ -58,43 +58,89 @@ The circuit connection for the RFID module can also be found in the code.
 ##3. Physical Model and Assembly
 You will need:
 1. 3mm plywood
-2. Access to a laser cutter
-3. 3D printer
-4. wood glue
-5. tape
-6. multipurpose adhesive
-7. transparent PLA filament
-8. wood PLA filament
-9. fine grain sandpaper
-10. 1 piece of black paper
-11. magnetic sheet
-12. scissors
-13. ruler
+2. All the leftover plywood scraps from laser cutting
+3. Access to a laser cutter
+4. Access to a 3D printer
+5. Access to a printer
+6. Paper
+7. Portraits of 4 family members
+8. Transparent PLA filament
+9. Wood PLA filament
+10. Wood glue
+11. Tape
+12. Multipurpose adhesive
+13. Fine grain sandpaper
+14. 1 piece of black paper
+15. A magnetic sheet
+16. Scissors
+17. Ruler
 
-# 3.1 3D printing
+## 3.1 3D printing
 Download the files in the [3D printed components folder](https://github.com/CE-GPP/Family_Board/tree/main/Physical%20Device/3D%20printed%20components) in the Physical Device folder. 
 Upload both gcode files to the SD card of a 3D printer, and print the familyBoardDoor with 0.2mm wood PLA filament.
 Next, print the twoFamilyBoardWindows with 0.2mm transparent PLA filament, and repeat this 8 times to print all 16 windows you need. 
 Next, print the familyBoardLCDScreenHolder with 0.2mm PLA filament of your choice.
 
-# 3.2 Laser cutting
+## 3.2 Laser cutting
 Download both files in the [Laser cut template folder](https://github.com/CE-GPP/Family_Board/tree/main/Physical%20Device/Laser%20cut%20template) in the Physical Device folder.
 
-3.2.1 Laser cutting the family board face
+# 3.2.1 Laser cutting the family board face
 After opening the familyBoardFace file and exporting it to the laser cutter, set the **location labels** and **spaces for the magnetic family portraits**, which are the **first columnn of rectangles from the left** to **engrave** instead of **cut**. All other lines can be set to **cut**. 
 After making this change, it can be laser cut onto 3mm plywood.
 
-#3.2.2 Laser cutting the family board roof
+# 3.2.2 Laser cutting the family board roof
 After opening the familyBoardRoof file and exporting it to the laser cutter, ensure that all its lines are set to **cut**. It can then be laser cut onto 3mm plywood.
 
-# 3.3 Assembling the family board
+## 3.3 Assembling the family board
+After you have laser cut the family board face, **keep the leftover plywood scraps** as you need them for later.
+# 3.3.1 Assembling the family board face
 A labelled version of the components of the family board face are shown below:
 
--Assemble the exterior faces of the board with wood glue one by one, and tape each of glued edges together for a secure finish. In the process, ensure that all the components are orientated correctly, and check that the slots at the side of the board are close to the board's front instead of the board's back. 
--Next, glue the two walls without finger joins to the top and bottom of the board's interior. Ensure that it glued as tightly as possible, as this is going to form the rail for the lid.
--Glue the top of the rails to the back of the top and bottom faces of the board, and glue the grip rail to the sliding face.
--Glue the support beams into the sides of the board, with the side with the least amount of distance between the hole and the end of the support beam on the side of the board with the hole for the LCD screen.
--Glue the stair pieces to each other, then glue it underneath the hole for the door in the front of the board.
+Assemble the exterior faces of the board with wood glue one by one, and tape each of glued edges together for a secure finish. In the process, ensure that all the components are orientated correctly, and check that the slots at the side of the board are close to the board's front instead of the board's back. 
+
+Next, glue the two walls without finger joins to the top and bottom of the board's interior. Ensure that it glued as tightly as possible, as this is going to form the rail for the sliding face.
+
+Glue the top of the rails to the back of the top and bottom faces of the board, and glue the grip rail to the sliding face.
+
+Very carefully slot the sliding face of the board into the rail created for it, with the raised edge of the grip rail facing outwards, and check whether it is able to slide in smoothly or not.If not, then remove the debris inside the rail or sand down the wood edges for smoother motion.
+
+Glue the support beams into the sides of the board, with the side with the least amount of distance between the hole and the end of the support beam on the side of the board with the hole for the LCD screen.
+
+Glue the stair pieces to each other, then glue it underneath the hole for the door in the front of the board, so that the hole for the door is positioned above the middle of the stairs, about 10mm away from each end.
+
+After following these steps, you should have a completely assembled the laser cut components of your family board face. Leave the board to dry for at least 2 hours.
+
+# 3.3.2 Assembling the family board roof
+Assemble each face of the roof with wood glue one by one, and tape each of the glued edges together for a secure finish. Then you can glue the longer base of the roof to the top of the family board, leaving about 35mm of overhang on each side. Then, leave the board and the roof to dry for at least 2 hours.
+
+## 3.4 Adding 3D printed and electronic components
+
+# 3.4.1 Adding the 3D printed components
+Slot each of the 3D printed windows into the 4 rows of rectangular holes on the board. In this process, you will have to slightly sand down the edges of each window and the holes in the board to make them fit snugly without adhesive. 
+
+Next, glue the 3D printed door to the front of the board on top of the stairs with multipurpose adhesive, covering the hole.
+
+Slot the LCD screen into the 3D printed LCD screen holder, and position it on top of the top inner support beam so the LCD screen is aligned with and visible from the hole cut for it in the front of the board. To do so, you may need to place a scrap piece of plywood underneath the LCD screen holder to prop it up so the screen can be fully visible through the hole. 
+Then take out the LCD screen to wire it, and glue the LCD screen holder into the suitable position with multipurpose adhesive.
+
+# 3.4.2 Adding electronic components
+Wire the electronic components of the device. 
+
+Thread the LED strip through each of the support beams and secure them to the underside of each one. To ensure the correct positioning of each LED pixel in accordance with our code, each of the 4 LED strips should always be placed from **right(side close to the family portraits magnets)** to **left (side close to the LCD screen)**. The spacing should be accurate if you position **the first 4 LED pixels** on each separate LED strip **behind the window the far right (side close to the family portait magnets)** in each row. 
+
+Slot the wired LCD screen into the now-secured LCD screen holder. 
+
+Position the RFID reader horizontally in the space behind the 3D printed door. 
+Place 2 leftover plywood scraps perpendicular to each other and glue them to the bottom of the board near the corner of the RFID reader to secure it in place behind the door. 
+
+## 3.5 Adding the family portrait magnets
+To create the family portrait magnets, print the portraits of four of your family members on paper around 36mm tall and 26mm wide and cut them out.
+Cut 8 rectangles of that same length and width (36mm x 26mm) out of your magnetic sheet. Glue 4 of them in the engraved rectangles on the face of the family board with multipurpose adhesive to make the magnetic surface to attach the family portrait magnets to. 
+Glue your printed family portraits to the remaining 4 magnetic sheets, and stick them onto the 4 magnetic surfaces of the board.
+
+
+After following these steps, the physical family board should be ready for use!
+
 
 
 ## Virtual Device:
