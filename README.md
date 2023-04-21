@@ -1,7 +1,9 @@
 # by Team 4 for CASA0021
 
-- Leo Liu
-- Sophia Chong
+- Leo Liu : ucfniup@ucl.ac.uk
+
+
+- Sophia Chong : sophia.chong.19@ucl.ac.uk
 - Xiaoya Nie : ucfnnie@ucl.ac.uk
 
  We build the family board project. If you have any question, please contact us.
@@ -43,15 +45,15 @@ The hardware required for the project are:
 
 4). LCD (I2C)
 
-The function of the hardware can be seen below:
+The function of the hardware can be found below:
 
  - <img width="400" alt="image" src="https://github.com/CE-GPP/Family_Board/blob/main/Physical Device/Components Code/08172beb176893227e6eea35bed5293.png">
  
 ### 2. Hardware code:
 
 The code for the hardware is in the Physical device folder: CardLCD.ino.
-The plateform used for the project is Arduino IDE. Please download the code and upload to the mircrocontroller.
-Circuit connection for the RFID module can also be found in the code.
+The platform used for the project is Arduino IDE. Please download the code and upload it to the microcontroller.
+The circuit connection for the RFID module can also be found in the code.
 
 
 ## Virtual Device:
