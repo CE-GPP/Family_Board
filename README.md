@@ -2,7 +2,8 @@
 
 - Leo Liu
 - Sophia Chong
-- Xiaoya Nie
+- Xiaoya Nie : ucfnnie@ucl.ac.uk
+
  We build the family board project. If you have any question, please contact us.
 
 
