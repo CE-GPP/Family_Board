@@ -1,14 +1,23 @@
 # by Team 4 for CASA0021
+
 - Leo Liu
 - Sophia Chong
 - Xiaoya Nie
-
+ We build the family board project. If you have any question, please contact us.
 
 
 # Family Board
 
-is your continuous integration, delivery and learning solution for 
+Project introduction:
 
+Family board is a device that can allow family members upload and share their location with family members. It has a physical device and its digital twin on android unity app. All the location information is self- reported. It donot have the privacy issue (like personal location tracking). This device has a warm, home-like appearance.  
+
+ - <img width="800" alt="image" src="https://github.com/CE-GPP/Family_Board/blob/main/Physical Device/product.jpg">
+
+To use the physical device, user just need to tap their unique PFID tag on the "door", the window light on the device will change.
+User can also change location in app. When they are at other location, they can input message in the pannel. The physical device will show the message on the LCD screen.
+
+ - <img width="800" alt="image" src="https://github.com/CE-GPP/Family_Board/blob/main/Physical Device/a2a16a8f39e635f15a1c85eb3049ed2.jpg">
 
 1. **
 
@@ -19,7 +28,34 @@ is your continuous integration, delivery and learning solution for
 
 # Getting Started
 
-## 1. Download The Virtual Device Android APP from Unity
+## Physical Device:
+
+### 1. Hardware required:
+
+The hardware required for the project are:
+
+1). Adafruit Feather HUZZAH ESP8266 
+
+2). MRCF522 RFID module
+
+3). WS2812b led strip: to make the led strip fit with the family board, it need to be cut in to 4 pieces, and solder with cable to rebuild the circuit connection.
+
+4). LCD (I2C)
+
+The function of the hardware can be seen below:
+
+ - <img width="400" alt="image" src="https://github.com/CE-GPP/Family_Board/blob/main/Physical Device/Components Code/08172beb176893227e6eea35bed5293.png">
+ 
+### 2. Hardware code:
+
+The code for the hardware is in the Physical device folder: CardLCD.ino.
+The plateform used for the project is Arduino IDE. Please download the code and upload to the mircrocontroller.
+Circuit connection for the RFID module can also be found in the code.
+
+
+## Virtual Device:
+
+### 1. Download The Virtual Device Android APP from Unity
 
 1. Head over to the [Family Board Virtual Device folder](https://github.com/CE-GPP/Family_Board/tree/main/Unity/Family%20Board%20Virtual%20Device) and open the folder as a new project in Unity. Before you begin, make sure that your project is set up in Unity 2021.3.13f1. The Mobile application for Family Board only supports the Android platform.
 
@@ -28,7 +64,7 @@ is your continuous integration, delivery and learning solution for
 3. From the top menu bar, select File and go to Build Settings. Select Android from the right platform lists and click Build and Run. Then, save the project in the desired location and make sure the Android mobile device is connected to Unity through a USB cable. Do not disconnect the mobile device until the Unity app automatically starts on the device.
 
 
-## 2. The Virtual Device Android APP
+### 2. The Virtual Device Android APP
 
 The goal of the Android app developed using Unity is to allow users to check or manipulate their family boards remotely through their mobile devices. The app contains a digital twin of the physical device and a user interface panel.
 
