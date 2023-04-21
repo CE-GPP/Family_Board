@@ -22,12 +22,6 @@ User can also change location in app. When they are at other location, they can 
 
  - <img width="800" alt="image" src="https://github.com/CE-GPP/Family_Board/blob/main/Physical Device/a2a16a8f39e635f15a1c85eb3049ed2.jpg">
 
-1. **
-
-
-2. **
-
-3. **
 
 # Getting Started
 
