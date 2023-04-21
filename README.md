@@ -22,6 +22,12 @@ User can also change location in app. When they are at other location, they can 
 
  - <img width="800" alt="image" src="https://github.com/CE-GPP/Family_Board/blob/main/Physical Device/a2a16a8f39e635f15a1c85eb3049ed2.jpg">
 
+1. **
+
+
+2. **
+
+3. **
 
 # Getting Started
 
@@ -48,6 +54,47 @@ The function of the hardware can be found below:
 The code for the hardware is in the Physical device folder: CardLCD.ino.
 The platform used for the project is Arduino IDE. Please download the code and upload it to the microcontroller.
 The circuit connection for the RFID module can also be found in the code.
+
+##3. Physical Model and Assembly
+You will need:
+1. 3mm plywood
+2. Access to a laser cutter
+3. 3D printer
+4. wood glue
+5. tape
+6. multipurpose adhesive
+7. transparent PLA filament
+8. wood PLA filament
+9. fine grain sandpaper
+10. 1 piece of black paper
+11. magnetic sheet
+12. scissors
+13. ruler
+
+# 3.1 3D printing
+Download the files in the [3D printed components folder](https://github.com/CE-GPP/Family_Board/tree/main/Physical%20Device/3D%20printed%20components) in the Physical Device folder. 
+Upload both gcode files to the SD card of a 3D printer, and print the familyBoardDoor with 0.2mm wood PLA filament.
+Next, print the twoFamilyBoardWindows with 0.2mm transparent PLA filament, and repeat this 8 times to print all 16 windows you need. 
+Next, print the familyBoardLCDScreenHolder with 0.2mm PLA filament of your choice.
+
+# 3.2 Laser cutting
+Download both files in the [Laser cut template folder](https://github.com/CE-GPP/Family_Board/tree/main/Physical%20Device/Laser%20cut%20template) in the Physical Device folder.
+
+3.2.1 Laser cutting the family board face
+After opening the familyBoardFace file and exporting it to the laser cutter, set the **location labels** and **spaces for the magnetic family portraits**, which are the **first columnn of rectangles from the left** to **engrave** instead of **cut**. All other lines can be set to **cut**. 
+After making this change, it can be laser cut onto 3mm plywood.
+
+#3.2.2 Laser cutting the family board roof
+After opening the familyBoardRoof file and exporting it to the laser cutter, ensure that all its lines are set to **cut**. It can then be laser cut onto 3mm plywood.
+
+# 3.3 Assembling the family board
+A labelled version of the components of the family board face are shown below:
+
+-Assemble the exterior faces of the board with wood glue one by one, and tape each of glued edges together for a secure finish. In the process, ensure that all the components are orientated correctly, and check that the slots at the side of the board are close to the board's front instead of the board's back. 
+-Next, glue the two walls without finger joins to the top and bottom of the board's interior. Ensure that it glued as tightly as possible, as this is going to form the rail for the lid.
+-Glue the top of the rails to the back of the top and bottom faces of the board, and glue the grip rail to the sliding face.
+-Glue the support beams into the sides of the board, with the side with the least amount of distance between the hole and the end of the support beam on the side of the board with the hole for the LCD screen.
+-Glue the stair pieces to each other, then glue it underneath the hole for the door in the front of the board.
 
 
 ## Virtual Device:
