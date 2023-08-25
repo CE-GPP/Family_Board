@@ -6,14 +6,13 @@
 - Sophia Chong : sophia.chong.19@ucl.ac.uk
 - Xiaoya Nie : ucfnnie@ucl.ac.uk
 
- We build the family board project. If you have any question, please contact us.
-
+We built the family board project. If you have any questions, please contact us.
 
 # Family Board
 
 Project introduction:
 
-Family board is a device that can allow family members upload and share their location with family members. It has a physical device and its digital twin on android unity app. All the location information is self- reported. It donot have the privacy issue (like personal location tracking). This device has a warm, home-like appearance.  
+Family board is a device that can allow family members to upload and share their location with family members. It has a physical device and its digital twin on the Android Unity Mobile Application. All the location information is self-reported. It does not have privacy issues (like personal location tracking). This device has a warm, home-like appearance.
 
  - <img width="800" alt="image" src="https://github.com/CE-GPP/Family_Board/blob/main/Physical Device/product.jpg">
 
@@ -22,12 +21,7 @@ User can also change location in app. When they are at other location, they can 
 
  - <img width="800" alt="image" src="https://github.com/CE-GPP/Family_Board/blob/main/Physical Device/a2a16a8f39e635f15a1c85eb3049ed2.jpg">
 
-1. **
 
-
-2. **
-
-3. **
 
 # Getting Started
 
